@@ -1,6 +1,9 @@
 import { CompanionCharacterDefinition, MountItem } from 'afnm-types';
 import { interaction1Early } from '../interactions/interaction1Early';
 import { sparInteraction } from '../interactions/sparInteraction';
+import { gifts1 } from '../interactions/gifts1';
+import { chenHuShopI } from '../interactions/shop';
+import { chenHuAdventureI } from '../interactions/chenHuAdventures1';
 
 export const chenHu1LateDef: CompanionCharacterDefinition = {
   kind: 'companion',
@@ -47,14 +50,15 @@ export const chenHu1LateDef: CompanionCharacterDefinition = {
           {
             kind: 'single',
             stance: 'attack2'
-          },
+          }
+        ],
+        rotationOverrides: [
           {
             kind: 'single',
             stance: 'attack3',
-            condition: 'Cloud > 11'
+            condition: 'Clouds > 11'
           }
         ],
-        rotationOverrides: [],
         drops: [],
         affinities: {
           cloud: 30,
@@ -66,12 +70,16 @@ export const chenHu1LateDef: CompanionCharacterDefinition = {
           none: 15
         },
         artefacts: [{name: window.modAPI.gameData.items['Blade of First Mountain'].name}],
-        talismans: [{name: window.modAPI.gameData.items['Shield Talisman (I)'].name}]
+        talismans: [{name: window.modAPI.gameData.items['Shield Talisman (I)'].name}],
+        clothing: window.modAPI.gameData.items['Jia Plate+'],
       }
     }
   ],
   talkInteraction: [interaction1Early],
+  shopInteraction: [chenHuShopI],
   sparInteraction: [sparInteraction],
+  customInteractions: [chenHuAdventureI],
+  giftInteraction: gifts1,
   encounters: [],
   locations: [
     {

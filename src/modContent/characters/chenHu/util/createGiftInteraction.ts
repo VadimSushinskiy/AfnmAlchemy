@@ -1,5 +1,6 @@
 import { GiftCharacterInteraction, ItemDesc } from 'afnm-types';
 import { chenHuName } from '../chenHuFlags';
+import { itm } from '../../../utils/eventUtils';
 
 export const createGiftInteraction = (
   item: string,
@@ -15,7 +16,7 @@ export const createGiftInteraction = (
     {
       kind: 'speech',
       character: chenHuName,
-      text: `"Heh, elder really brother needs ${amount > 1 ? 'some' : 'a'} ${item}.${amount > 1 ? amount + ' Would be enough.' : ''}"`,
+      text: `"Heh, elder really brother needs ${amount > 1 ? 'some' : 'a'} ${itm(item)}.${amount > 1 ? ' ' + amount + ' would be enough.' : ''}"`,
     },
   ],
   acceptSteps: [

@@ -6,7 +6,7 @@ export const sparInteraction: SparCharacterInteraction = {
   introSteps: [
     {
       kind: 'text',
-      text: `You watch ${chenHuName} do strange exercises`
+      text: `You watch ${chenHuName} do strange exercises.`
     },
     {
       kind: 'speech',

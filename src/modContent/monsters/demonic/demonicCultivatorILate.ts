@@ -53,7 +53,7 @@ export const demonicCultivatorI: EnemyEntity = {
     {
       item: window.modAPI.gameData.items['Enhancement Dust'],
       chance: 1,
-      amount: 10
+      amount: 5
     }
   ],
   pills: [
